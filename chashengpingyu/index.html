@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="差生评语 - 为班主任提供丰富、得体且具有激励性的学生期末评语范文库，涵盖思想、学习、纪律及家校沟通建议，助力教育评价更加科学人性化。">
+    <meta name="keywords" content="差生评语,学生评语,班主任评语,期末评语,学生评语大全">
+    <title>差生评语-班主任期末评语范文与激励指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 30px;
+            border: none;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            outline: none;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .search-box button:hover {
+            background-color: #d35400;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title h2 {
+            color: var(--primary-color);
+        }
+
+        /* Quote Cards */
+        .quote-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .quote-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .quote-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .quote-card::before {
+            content: "“";
+            font-size: 60px;
+            color: rgba(230, 126, 34, 0.1);
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            font-family: serif;
+        }
+
+        .quote-card p {
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+            color: var(--text-color);
+            font-style: italic;
+        }
+
+        .quote-tag {
+            display: inline-block;
+            font-size: 12px;
+            background-color: #f0f0f0;
+            color: var(--text-light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .quote-card .action-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 14px;
+        }
+
+        .category-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .category-list span {
+            color: var(--text-light);
+            font-size: 12px;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background-color: #fff8f0;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .tips-section h3 {
+            color: #d35400;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .tips-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>评语</span>宝
+            </a>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">思想品德</a>
+                <a href="#">学习态度</a>
+                <a href="#">纪律表现</a>
+                <a href="#">家校沟通</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>差生评语大全</h1>
+        <p>告别千篇一律的批评，用真诚与鼓励点亮学生的成长之路。为您提供专业、得体且具有激励性的期末评语范文。</p>
+        <div class="search-box">
+            <input type="text" placeholder="输入学生特点，如：懒惰、贪玩、基础差...">
+            <button type="button">搜索评语</button>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="main-content">
+            <div class="section-title">
+                <h2>精选评语推荐</h2>
+                <a href="#" style="font-size: 14px; color: var(--accent-color);">查看全部 &rarr;</a>
+            </div>
+            
+            <div class="quote-grid">
+                <!-- Card 1 -->
+                <article class="quote-card">
+                    <span class="quote-tag">学习态度</span>
+                    <p>你是个聪明但有些贪玩的孩子。老师知道你其实很聪明，只是缺少了一点自律。如果把玩耍的时间分一点给学习，你会发现成绩会有很大的提升。老师相信你，只要你肯努力，一定能行！</p>
+                    <div class="action-area">
+                        <span style="font-size: 12px; color: #999;">适用对象：成绩下滑、贪玩</span>
+                        <button class="copy-btn" onclick="copyText(this)">复制</button>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="quote-card">
+                    <span class="quote-tag">基础薄弱</span>
+                    <p>看到你上课偶尔走神，老师心里很着急。学习就像盖房子，地基如果不牢固，上面的楼层就很难稳固。希望你能沉下心来，从最基础的知识补起，不要怕慢，只要坚持，每天进步一点点就是胜利。</p>
+                    <div class="action-area">
+                        <span style="font-size: 12px; color: #999;">适用对象：基础差、跟不上</span>
+                        <button class="copy-btn" onclick="copyText(this)">复制</button>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="quote-card">
+                    <span class="quote-tag">纪律散漫</span>
+                    <p>你头脑灵活，反应快，但课堂纪律是你的软肋。一个没有规则意识的人，很难在未来的竞争中走得更远。希望新学期你能管住自己的小手和小嘴，做一个让老师放心、让同学信任的好学生。</p>
+                    <div class="action-area">
+                        <span style="font-size: 12px; color: #999;">适用对象：上课讲话、不守纪</span>
+                        <button class="copy-btn" onclick="copyText(this)">复制</button>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="quote-card">
+                    <span class="quote-tag">懒惰拖延</span>
+                    <p>你拥有很好的学习天赋，但“拖延症”成了你最大的敌人。作业经常拖拉，考试前临时抱佛脚。学习是一场马拉松，不是百米冲刺。请记住，真正的优秀不是爆发力，而是持久的耐力。加油！</p>
+                    <div class="action-area">
+                        <span style="font-size: 12px; color: #999;">适用对象：作业拖拉、缺乏动力</span>
+                        <button class="copy-btn" onclick="copyText(this)">复制</button>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="quote-card">
+                    <span class="quote-tag">缺乏自信</span>
+                    <p>每次考试后你都垂头丧气，其实你并不比别人差。你只是低估了自己的潜力。自信是成功的第一秘诀。不要因为一次失败就否定自己，老师希望看到你抬头挺胸的样子，那才是最帅气的。</p>
+                    <div class="action-area">
+                        <span style="font-size: 12px; color: #999;">适用对象：自卑、害怕考试</span>
+                        <button class="copy-btn" onclick="copyText(this)">复制</button>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="quote-card">
+                    <span class="quote-tag">粗心大意</span>
+                    <p>你很聪明，解题思路也很清晰，但总是因为粗心大意丢分。这就像打仗时看错了地图，再好的战术也打不赢。希望你能养成认真检查的好习惯，把“马虎”这个坏朋友赶走，你的成绩会突飞猛进。</p>
+                    <div class="action-area">
+                        <span style="font-size: 12px; color: #999;">适用对象：粗心、审题不清</span>
+                        <button class="copy-btn" onclick="copyText(this)">复制</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3>分类浏览</h3>
+                <ul class="category-list">
+                    <li><a href="#">思想品德类 <span>12条</span></a></li>
+                    <li><a href="#">学习态度类 <span>24条</span></a></li>
+                    <li><a href="#">纪律表现类 <span>8条</span></a></li>
+                    <li><a href="#">基础薄弱类 <span>15条</span></a></li>
+                    <li><a href="#">粗心大意类 <span>10条</span></a></li>
+                    <li><a href="#">缺乏自信类 <span>9条</span></a></li>
+                    <li><a href="#">懒惰拖延类 <span>11条</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card tips-section">
+                <h3>💡 写好差生评语的小技巧</h3>
+                <ul>
+                    <li><strong>三明治法则：</strong>肯定优点 - 指出不足 - 寄予希望。</li>
+                    <li><strong>避免标签：</strong>少用“差生”等贬义词，多用“潜力股”等积极词汇。</li>
+                    <li><strong>具体化：</strong>指出具体的行为（如作业拖拉），而不是笼统的批评。</li>
+                    <li><strong>家校共育：</strong>建议家长多鼓励，少指责，共同制定改进计划。</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系合作</a>
+            </div>
+            <p class="copyright">Copyright © 2023 评语宝 All Rights Reserved. 本站资源仅供教师参考使用。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的复制功能
+        function copyText(btn) {
+            const card = btn.closest('.quote-card');
+            const text = card.querySelector('p').innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = '已复制';
+                btn.style.backgroundColor = '#27ae60';
+                btn.style.borderColor = '#27ae60';
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.borderColor = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制');
+            });
+        }
+
+        // 搜索框交互（模拟）
+        const searchInput = document.querySelector('.search-box input');
+        const searchBtn = document.querySelector('.search-box button');
+        
+        function performSearch() {
+            const val = searchInput.value.trim();
+            if(val) {
+                alert('搜索功能演示：正在查找包含“' + val + '”的评语...');
+            }
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') performSearch();
+        });
+    </script>
+</body>
+</html>
