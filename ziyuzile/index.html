@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="自娱自乐电影 - 探索个人化观影与家庭娱乐的终极指南，涵盖家庭影院搭建、私人电影制作、低成本观影设备推荐及家庭娱乐内容策划。">
+    <meta name="keywords" content="自娱自乐电影,家庭影院,私人电影,家庭娱乐,观影指南,自制电影">
+    <title>自娱自乐电影-私人观影与家庭娱乐的极致指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #ffb74d;
+            --accent-hover: #ffa726;
+            --border: #333;
+            --spacing: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, #2a2a2a 0%, #121212 70%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, var(--accent), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--text-muted);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Content Grid */
+        .section-title {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .card-image img {
+            opacity: 1;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: var(--accent);
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Special Section: DIY Guide */
+        .guide-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .guide-text h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .guide-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .check-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            color: var(--text-muted);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .guide-visual {
+            background-color: #000;
+            border-radius: 8px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .guide-visual::after {
+            content: "DIY 布局示意图";
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Topics List */
+        .topic-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topic-pill {
+            background-color: #2a2a2a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border: 1px solid transparent;
+        }
+
+        .topic-pill:hover {
+            border-color: var(--accent);
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+            .guide-grid { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+                <span>自娱自乐电影</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">家庭影院</a></li>
+                    <li><a href="#">私人制作</a></li>
+                    <li><a href="#">设备推荐</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>打造专属的私人影院</h1>
+                <p>无论你是想搭建沉浸式家庭影院，还是利用手机制作一部个人微电影，我们提供从硬件选型、内容策划到拍摄剪辑的全方位指南，让自娱自乐成为一种生活方式。</p>
+                <div class="cta-group">
+                    <a href="#setup" class="btn btn-primary">开始搭建</a>
+                    <a href="#guide" class="btn btn-outline">学习制作</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Topics -->
+        <section class="container">
+            <h2 class="section-title">探索你的娱乐方式</h2>
+            <div class="topic-list">
+                <a href="#" class="topic-pill">家庭影院搭建指南</a>
+                <a href="#" class="topic-pill">低成本观影设备</a>
+                <a href="#" class="topic-pill">私人微电影剧本</a>
+                <a href="#" class="topic-pill">手机拍摄技巧</a>
+                <a href="#" class="topic-pill">智能家居影音</a>
+                <a href="#" class="topic-pill">复古电影收藏</a>
+                <a href="#" class="topic-pill">家庭卡拉OK</a>
+                <a href="#" class="topic-pill">桌面影院系统</a>
+            </div>
+        </section>
+
+        <!-- DIY Guide Section -->
+        <section id="guide" class="container">
+            <h2 class="section-title">私人微电影制作指南</h2>
+            <div class="guide-section">
+                <div class="guide-grid">
+                    <div class="guide-text">
+                        <h3>如何用手机拍出电影感？</h3>
+                        <p>自娱自乐电影不一定需要昂贵的单反。掌握以下技巧，即使使用手机也能拍摄出具有专业质感的私人影像：</p>
+                        <ul class="check-list">
+                            <li>使用“电影模式”或开启24fps/30fps帧率</li>
+                            <li>善用自然光，避免在逆光下拍摄</li>
+                            <li>保持画面稳定，使用稳定器或三脚架</li>
+                            <li>后期使用滤镜增强氛围感</li>
+                            <li>多运用景深变化突出主体</li>
+                        </ul>
+                    </div>
+                    <div class="guide-visual">
+                        <!-- Placeholder for visual guide -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Recommendations -->
+        <section id="setup" class="container">
+            <h2 class="section-title">热门观影设备推荐</h2>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">投影仪</span>
+                        <img src="https://picsum.photos/seed/proj/400/250" alt="家用投影仪推荐">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">千元级智能投影仪选购</h3>
+                        <p class="card-desc">解析度、亮度与梯形校正功能的权衡，如何在小空间获得大屏体验。</p>
+                        <a href="#" class="card-link">查看评测 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">音响</span>
+                        <img src="https://picsum.photos/seed/sound/400/250" alt="家庭音响系统">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">打造环绕声家庭影院</h3>
+                        <p class="card-desc">入门级5.1声道方案解析，提升观影沉浸感的关键在于低音炮的选择。</p>
+                        <a href="#" class="card-link">了解方案 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-tag">播放器</span>
+                        <img src="https://picsum.photos/seed/player/400/250" alt="媒体播放器">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">NAS与个人影视库搭建</h3>
+                        <p class="card-desc">如何建立私有云存储，实现随时随地观看本地高清电影资源。</p>
+                        <a href="#" class="card-link">获取教程 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Entertainment Content -->
+        <section class="container">
+            <h2 class="section-title">周末宅家娱乐灵感</h2>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">经典黑白电影重温</h3>
+                        <p class="card-desc">在这个色彩丰富的时代，重新审视黑白光影的魅力。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">低成本家庭聚会游戏</h3>
+                        <p class="card-desc">无需购买昂贵桌游，利用现有道具就能玩转家庭派对。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">自制冷门美食配电影</h3>
+                        <p class="card-desc">为不同的电影类型搭配专属的下午茶或宵夜菜单。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        自娱自乐电影致力于分享个人化、生活化的娱乐内容与技巧。我们相信，最好的娱乐往往源于最简单的热爱。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">设备选购</a></li>
+                        <li><a href="#">制作教程</a></li>
+                        <li><a href="#">影评专栏</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">摄影器材网</a></li>
+                        <li><a href="#">影视剪辑教程</a></li>
+                        <li><a href="#">智能家居资讯</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 自娱自乐电影 - 专注于私人生活娱乐体验
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
