@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩国-探索多元文化、旅游胜地与时尚潮流</title>
+    <meta name="description" content="韩国旅行攻略、首尔美食推荐、韩流文化资讯及时尚潮流指南。为您提供深度韩国旅游体验与实用信息。">
+    <meta name="keywords" content="韩国,首尔,韩流,韩国旅游,韩国美食,韩国购物">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0038a8; /* 韩国国旗蓝 */
+            --accent-color: #fe0000; /* 韩国国旗红 */
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-secondary: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--primary-color) 50%, var(--accent-color) 50%);
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: url('https://picsum.photos/seed/seoul/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #002a7a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,56,168,0.3);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+        }
+
+        .section-header a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .section-header a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Grid Layouts */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background-color: #eef2ff;
+            color: var(--primary-color);
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Features / Highlights */
+        .feature-row {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .feature-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-img {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .feature-text p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Guide / FAQ */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guide-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .guide-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .grid-4, .grid-3, .feature-row, .guide-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-row {
+                flex-direction: column;
+            }
+
+            .feature-img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span></span>韩国探索
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#travel" class="active">旅游攻略</a></li>
+                    <li><a href="#food">美食指南</a></li>
+                    <li><a href="#culture">韩流文化</a></li>
+                    <li><a href="#shopping">购物体验</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>遇见独特的半岛风情</h1>
+                <p>从古老宫殿的宁静到现代都市的繁华，探索韩国的多元魅力。为您提供最新的旅行资讯、地道的美食推荐与深度的文化体验指南。</p>
+                <a href="#travel" class="btn btn-primary">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Travel Highlights -->
+        <section id="travel" class="container">
+            <div class="section-header">
+                <h2>热门旅游目的地</h2>
+                <a href="#">查看更多目的地 &rarr;</a>
+            </div>
+            
+            <div class="grid-3">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/gyeongbokgung/600/400" alt="景福宫" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">首尔</span>
+                        <h3 class="card-title">首尔：传统与现代的完美融合</h3>
+                        <p class="card-desc">漫步于景福宫感受朝鲜王朝的威严，随后转角进入明洞的霓虹灯海，体验首尔的独特节奏。</p>
+                        <div class="card-meta">
+                            <span>历史古迹</span>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/jeju/600/400" alt="济州岛" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">济州岛</span>
+                        <h3 class="card-title">济州岛：海岛度假的极致体验</h3>
+                        <p class="card-desc">探索汉拿山的壮丽，在城山日出峰看海，或在汉拿山植物园享受清新的自然空气。</p>
+                        <div class="card-meta">
+                            <span>自然风光</span>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/gangneung/600/400" alt="江原道" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">江原道</span>
+                        <h3 class="card-title">江原道：滑雪与温泉的胜地</h3>
+                        <p class="card-desc">冬季的旌善雪花节不容错过，夏季的雪岳山则是徒步爱好者的天堂。</p>
+                        <div class="card-meta">
+                            <span>户外活动</span>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Culture & Trends -->
+        <section class="container">
+            <div class="section-header">
+                <h2>韩流文化趋势</h2>
+                <a href="#">阅读更多文化资讯 &rarr;</a>
+            </div>
+            
+            <div class="feature-row">
+                <div class="feature-img">
+                    <img src="https://picsum.photos/seed/kpop/800/600" alt="K-Pop 音乐节">
+                </div>
+                <div class="feature-text">
+                    <h3>K-Pop 音乐节与全球巡演</h3>
+                    <p>韩国流行音乐（K-Pop）已经走向世界，成为连接韩国与全球年轻人的文化桥梁。从首尔的高阳K-Pop广场到世界各地的演唱会，感受强大的舞台魅力和粉丝文化。</p>
+                    <ul class="feature-list">
+                        <li>2024年全球巡回演唱会日程安排</li>
+                        <li>首尔周边热门音乐节打卡指南</li>
+                        <li>如何获取演唱会门票及周边</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-img">
+                    <img src="https://picsum.photos/seed/kdrama/800/600" alt="韩剧拍摄地">
+                </div>
+                <div class="feature-text">
+                    <h3>韩剧取景地深度游</h3>
+                    <p>跟着韩剧去旅行，是许多游客的首选方式。从《来自星星的你》的南山塔到《鱿鱼游戏》的岛屿，探访剧中经典场景，重温剧情中的浪漫与感动。</p>
+                    <ul class="feature-list">
+                        <li>首尔热门韩剧取景地地图</li>
+                        <li>釜山海滨电影之都探索</li>
+                        <li>全州韩屋村的传统体验</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Guide -->
+        <section id="food" class="container">
+            <div class="section-header">
+                <h2>必尝韩国美食</h2>
+                <a href="#">查看完整美食地图 &rarr;</a>
+            </div>
+            
+            <div class="grid-4">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/kimbap/400/300" alt="紫菜包饭" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">紫菜包饭</h3>
+                        <p class="card-desc">韩国最常见的小吃，简单美味，适合作为便当或街头小吃。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/bibimbap/400/300" alt="石锅拌饭" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">石锅拌饭</h3>
+                        <p class="card-desc">将米饭、蔬菜、肉类和韩式辣酱在滚烫的石锅中搅拌均匀。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/tteokbokki/400/300" alt="辣炒年糕" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">辣炒年糕</h3>
+                        <p class="card-desc">甜辣可口的街头经典，是游客必试的零食。</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/kimchi/400/300" alt="泡菜" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">韩式泡菜</h3>
+                        <p class="card-desc">韩国饮食的灵魂，不仅美味，还富含益生菌。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Practical Guide -->
+        <section class="container">
+            <div class="section-header">
+                <h2>旅行实用指南</h2>
+            </div>
+            
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <span class="guide-icon">🛂</span>
+                    <h3>签证办理</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">中国公民可免签停留30天，详细办理流程及所需材料。</p>
+                </div>
+                <div class="guide-item">
+                    <span class="guide-icon">🚇</span>
+                    <h3>交通出行</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">首尔地铁系统发达，购买T-Money卡轻松畅游全境。</p>
+                </div>
+                <div class="guide-item">
+                    <span class="guide-icon">💳</span>
+                    <h3>支付方式</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">信用卡普及率高，现金在传统市场仍不可或缺。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display:inline-block; color:white;">
+                        <span style="background:linear-gradient(135deg, var(--primary-color) 50%, var(--accent-color) 50%);"></span>韩国探索
+                    </a>
+                    <p style="font-size: 0.9rem; color: #999;">
+                        致力于为您提供最全面、最实用的韩国旅行资讯、美食推荐与文化解读。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">广告合作</a></li>
+                        <li><a href="#">网站地图</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">首尔旅游</a></li>
+                        <li><a href="#">济州岛攻略</a></li>
+                        <li><a href="#">韩流明星</a></li>
+                        <li><a href="#">美妆护肤</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">小红书</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 韩国探索网. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+                      </html>
