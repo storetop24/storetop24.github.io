@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="孙国祥-资深专家与行业领袖，致力于提供专业的技术解决方案与战略咨询服务，分享前沿洞察与行业经验。">
+    <meta name="keywords" content="孙国祥,专家顾问,行业洞察,技术解决方案,战略咨询">
+    <title>孙国祥-专业顾问与行业解决方案专家</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #3182ce;
+            --text-main: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-body: #f7fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #2b6cb0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c5282 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Profile Section */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #cbd5e0;
+        }
+
+        .profile-info {
+            padding: 2rem;
+        }
+
+        .profile-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-role {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: #ebf8ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .stat-item h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item span {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #ebf8ff;
+            color: var(--accent-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Publications/Articles */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .article-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .article-date {
+            background: #edf2f7;
+            padding: 0.5rem;
+            border-radius: 6px;
+            text-align: center;
+            min-width: 60px;
+        }
+
+        .article-date .day {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .article-date .month {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        .article-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content h3 a:hover {
+            color: var(--accent-color);
+        }
+
+        .article-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            opacity: 0.8;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col a {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-item {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">孙<span>国祥</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active">关于我</a></li>
+                    <li><a href="#services">专业服务</a></li>
+                    <li><a href="#articles">行业观点</a></li>
+                    <li><a href="#contact">联系咨询</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">预约咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>深耕行业十余年<br>提供专业解决方案</h1>
+                <p>孙国祥致力于为企业和个人提供战略咨询、技术架构设计及行业趋势分析服务，助力客户实现商业价值最大化。</p>
+                <div class="hero-actions">
+                    <a href="#services" class="cta-button">了解服务</a>
+                    <a href="#about" class="btn-outline">查看履历</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>关于孙国祥</h2>
+                    <p>资深行业专家，专注技术与管理的深度融合</p>
+                </div>
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <!-- Placeholder image representing a professional -->
+                        <img src="https://picsum.photos/seed/sungx/400/400" alt="孙国祥头像" class="profile-img">
+                        <div class="profile-info">
+                            <h3>孙国祥</h3>
+                            <span class="profile-role">资深顾问 / 技术总监</span>
+                            <p style="margin-bottom: 1rem;">拥有超过15年的行业经验，曾任职于多家知名企业，擅长解决复杂业务场景下的技术难题。</p>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <h4>15+</h4>
+                                    <span>年经验</span>
+                                </div>
+                                <div class="stat-item">
+                                    <h4>100+</h4>
+                                    <span>项目案例</span>
+                                </div>
+                                <div class="stat-item">
+                                    <h4>50+</h4>
+                                    <span>合作客户</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <h3>专业背景与愿景</h3>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">
+                            孙国祥在行业内拥有深厚的积累，专注于通过技术创新推动业务增长。他不仅具备扎实的技术功底，更拥有敏锐的商业洞察力。
+                        </p>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">
+                            在过去的工作中，孙国祥主导过多个大型数字化转型项目，积累了丰富的实战经验。他主张“技术服务于业务”的理念，致力于帮助企业在快速变化的市场环境中保持竞争优势。
+                        </p>
+                        <div style="margin-top: 2rem;">
+                            <h4>核心优势</h4>
+                            <ul style="margin-top: 0.5rem; color: var(--text-secondary);">
+                                <li>• 全栈技术架构设计能力</li>
+                                <li>• 复杂业务流程梳理与优化</li>
+                                <li>• 团队管理与人才培养</li>
+                                <li>• 行业前沿趋势研判</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section" style="background-color: #f0f4f8;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心服务领域</h2>
+                    <p>量身定制的专业咨询与解决方案</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3>技术架构咨询</h3>
+                        <p>为企业提供从微服务设计、云原生架构到高并发解决方案的全方位技术咨询服务。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h3>数字化转型战略</h3>
+                        <p>结合行业趋势与企业发展现状，制定切实可行的数字化转型路径与实施计划。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3>团队管理与培训</h3>
+                        <p>提供技术团队建设、敏捷开发流程落地以及专业技能培训服务。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles/Insights Section -->
+        <section id="articles" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>行业观点与文章</h2>
+                    <p>分享最新的技术趋势与实战经验</p>
+                </div>
+                <div class="article-list">
+                    <article class="article-item">
+                        <div class="article-date">
+                            <span class="day">15</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="article-content">
+                            <h3><a href="#">2024年企业数字化转型避坑指南</a></h3>
+                            <p>在数字化转型过程中，企业往往容易陷入“重技术、轻业务”的误区。本文结合实际案例，分析了如何平衡技术投入与业务产出...</p>
+                        </div>
+                    </article>
+                    <article class="article-item">
+                        <div class="article-date">
+                            <span class="day">02</span>
+                            <span class="month">Sep</span>
+                        </div>
+                        <div class="article-content">
+                            <h3><a href="#">微服务架构下的性能优化实践</a></h3>
+                            <p>随着服务拆分的深入，系统的复杂度也随之增加。如何保证微服务架构下的系统稳定性与高性能，是每个技术负责人必须面对的挑战...</p>
+                        </div>
+                    </article>
+                    <article class="article-item">
+                        <div class="article-date">
+                            <span class="day">20</span>
+                            <span class="month">Aug</span>
+                        </div>
+                        <div class="article-content">
+                            <h3><a href="#">AI技术如何赋能传统行业</a></h3>
+                            <p>人工智能不再是遥不可及的概念，它正在深刻改变着传统行业的生产方式。本文探讨了AI在制造业、服务业等领域的具体应用场景...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="background-color: #f0f4f8;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>联系与咨询</h2>
+                    <p>如果您有任何问题或合作意向，欢迎随时联系</p>
+                </div>
+                <div class="contact-container">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，孙国祥团队将尽快与您联系。');">
+                        <div class="profile-grid">
+                            <div class="form-group">
+                                <label for="name">您的姓名</label>
+                                <input type="text" id="name" placeholder="请输入姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">电子邮箱</label>
+                                <input type="email" id="email" placeholder="example@domain.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">咨询主题</label>
+                            <input type="text" id="subject" placeholder="请简要描述咨询内容">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">详细留言</label>
+                            <textarea id="message" rows="5" placeholder="请在此详细描述您的需求..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="color: white;">孙<span>国祥</span></a>
+                    <p>致力于通过专业的技术与管理咨询，帮助企业在变革时代中稳健前行。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#about">关于我</a></li>
+                        <li><a href="#services">专业服务</a></li>
+                        <li><a href="#articles">行业观点</a></li>
+                        <li><a href="#contact">联系咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务领域</h4>
+                    <ul>
+                        <li><a href="#">技术架构</a></li>
+                        <li><a href="#">数字化转型</a></li>
+                        <li><a href="#">团队管理</a></li>
+                        <li><a href="#">战略咨询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>contact@sun-guoxiang.com</li>
+                        <li>+86 138 0000 0000</li>
+                        <li>北京市朝阳区科技园A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 孙国祥专业顾问团队. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
